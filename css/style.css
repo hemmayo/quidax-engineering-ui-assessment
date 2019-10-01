@@ -503,14 +503,15 @@ main {
           height: 100%; }
 
 .Navbar {
-  width: 90%;
+  width: 80%;
   max-width: 33rem;
   font-size: 1.4rem;
   overflow-y: scroll;
   height: 91vh;
   background-color: #fefefe;
   border-right: 1px solid #f1f1f1;
-  box-shadow: 0rem 0rem 2.5rem #f1f1f1; }
+  box-shadow: 0rem 0rem 2.5rem #f1f1f1;
+  z-index: 10; }
   @media (max-width: 1024px) {
     .Navbar {
       height: 100vh;
@@ -521,7 +522,8 @@ main {
       transform: translateX(-110%);
       transition: all 0.25s ease-in-out; } }
   .Navbar--open {
-    transform: translateX(0%); }
+    transform: translateX(0%);
+    box-shadow: 6rem 0rem 20rem #212121; }
   .Navbar__close::after {
     content: '\2190';
     font-size: 2.8rem; }
