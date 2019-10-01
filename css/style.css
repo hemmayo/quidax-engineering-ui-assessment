@@ -235,7 +235,7 @@ main {
   @media (max-width: 1024px) {
     .grid-col-2, .grid-col-3, .grid-col-4 {
       grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 425px) {
+  @media (max-width: 600px) {
     .grid-col-2, .grid-col-3, .grid-col-4 {
       grid-template-columns: 1fr; } }
   .grid-gap {
@@ -303,7 +303,7 @@ main {
 
 .hidden {
   display: none !important; }
-  @media (max-width: 425px) {
+  @media (max-width: 600px) {
     .hidden-xs {
       display: none !important; } }
   @media (max-width: 1024px) {
@@ -315,7 +315,7 @@ main {
   @media (max-width: 1024px) {
     .visible-sm {
       display: flex !important; } }
-  @media (max-width: 425px) {
+  @media (max-width: 600px) {
     .visible-xs {
       display: flex !important; } }
 

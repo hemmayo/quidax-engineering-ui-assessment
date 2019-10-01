@@ -104,7 +104,7 @@ The app's main entry point.
 
 The scrolling momentum on fixed containers worked as expected on desktop browsers, but didn't work on touch devices, especially iOS browsers
 
-#### Fix 
+#### Fix
 
 Set -webkit-overflow-scrolling property of parent container to touch.
 
