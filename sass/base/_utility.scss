@@ -69,6 +69,9 @@
   &-col-3,
   &-col-4 {
     @include respond-to(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include respond-to(mobile) {
       grid-template-columns: 1fr;
     }
   }

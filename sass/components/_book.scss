@@ -5,6 +5,8 @@
   position: relative;
   overflow: hidden;
 
+  box-shadow: 1rem 2rem 3rem darken($border-color, 5%);
+
   &:not(:last-of-type) {
     margin-right: 2rem;
 
@@ -59,11 +61,11 @@
   @include respond-to(tablet) {
     &__info-close::after {
       position: absolute;
-      top: 2rem;
+      top: 1rem;
       right: 2rem;
       content: '\00d7';
       font-size: xx-large;
-      text-shadow: 1px 1px 3px $border-color;
+      // text-shadow: 1px 1px 3px $border-color;
       color: darken($color-white, 10%);
     }
   }

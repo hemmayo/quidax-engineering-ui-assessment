@@ -8,6 +8,7 @@
   background-color: $color-light;
   border-right: 1px solid $border-color;
   box-shadow: 0rem 0rem 2.5rem $border-color;
+  // z-index: 10;
 
   @include respond-to(tablet) {
     height: 100vh;

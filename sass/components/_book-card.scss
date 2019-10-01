@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   font-size: 1.25rem;
+  width: 100%;
   cursor: pointer;
   transition: $transition-default;
 
@@ -13,11 +14,15 @@
     border: 1px solid $border-color;
   }
 
+  & > * {
+    margin-right: 1.2rem;
+  }
+
   // Book Card Image
   &__img {
     flex-basis: 10rem;
     flex-shrink: 0;
-    margin-right: 1.2rem;
+
     height: 15.5rem;
 
     & > img {
@@ -41,6 +46,8 @@
   &__title {
     font-weight: 600;
     font-size: 1.45rem;
+    line-height: 120%;
+    margin-bottom: 0.5rem;
   }
 
   &__more {
