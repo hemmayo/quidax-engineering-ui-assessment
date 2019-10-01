@@ -10,7 +10,7 @@ After you clone this project, these commands are available in `package.json`.
 
 ```bash
 yarn run dev # run the app in development mode
-yarn run watch:sass # converts Scss files into CSS and auto-compiles Sass every time it changes
+yarn run watch:sass # watches for changes in sass files, converts scss files into CSS and auto-compiles Sass every time changes are made.
 yarn run build:css # compiles, prefixes and compresses sass files to a single style.css file.
 yarn run format # format source files with Prettier
 ```
@@ -104,7 +104,8 @@ The app's main entry point.
 
 The scrolling momentum on fixed containers worked as expected on desktop browsers, but didn't work on touch devices, especially iOS browsers
 
-#### Fix: 
+#### Fix 
+
 Set -webkit-overflow-scrolling property of parent container to touch.
 
 > Line 74: '/sass/base/_base.scss'
@@ -112,3 +113,11 @@ Set -webkit-overflow-scrolling property of parent container to touch.
 ```css
 -webkit-overflow-scrolling: touch;
 ```
+
+## Feedback
+
+Duplicating DOM elements and populating them with random data causes an unnecessary increase in development time. Though it's not difficult or stressful, it would be better if candidates could dynamically populate the DOM.
+
+An API or a JSON file that provides data about these books would be ideal.
+
+It would reduce development time and also give you (the recruiter) more insight to the candidates' technical skills.
