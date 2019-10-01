@@ -50,21 +50,21 @@ $ yarn run dev
 ├─ sass/
 |  ├─ abstracts/
 |  |  ├─ _mixins.scss
-|  |  ├─ _override.scss
+|  |  ├─ _overrides.scss
 |  |  ├─ _variables.scss
 │  ├─ base/
 |  |  ├─ _animations.scss
-|  |  ├─ _base_.scss
+|  |  ├─ _base.scss
 |  |  ├─ _typography_.scss
-|  |  ├─ _utility_.scss
+|  |  ├─ _utility.scss
 │  ├─ components/
 |  |  ├─ _badge.scss
 |  |  ├─ _book-card.scss
 |  |  ├─ _book.scss
 |  |  ├─ _rating.scss
 │  ├─ layout/
-|  |  ├─ _footer_.scss
-|  |  ├─ _header_.scss
+|  |  ├─ _footer.scss
+|  |  ├─ _header.scss
 |  |  ├─ _navbar.scss
 │  ├─ pages/
 |  |  ├─ _dashboard.scss
@@ -88,7 +88,7 @@ UI logic is implemented here.
 
 ### sass/
 
-SASS stylesheets are in this folder.
+Sass stylesheets are in this folder.
 
 #### sass/main.scss
 
@@ -96,13 +96,13 @@ This is the main entry point for all Sass files.
 
 ### index.html
 
-Main entry point.
+The app's main entry point.
 
 ## Issues faced
 
 ### Cross-browser compatibility
 
-The scrolling momentum on fixed containers worked as expected on desktop browsers but not on touch devices, especially iOS browsers
+The scrolling momentum on fixed containers worked as expected on desktop browsers, but didn't work on touch devices, especially iOS browsers
 
 #### Fix: 
 Set -webkit-overflow-scrolling property of parent container to touch.

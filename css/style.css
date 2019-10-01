@@ -361,16 +361,19 @@ main {
       left: 0;
       height: 2px;
       width: 1.6rem;
-      background-color: currentColor; }
+      padding: 0.5rem; }
     .Header__hamburger::before {
-      top: -0.8rem; }
+      top: -0.8rem;
+      border-top: 2px solid currentColor; }
     .Header__hamburger::after {
-      bottom: -0.8rem; }
+      bottom: -0.8rem;
+      border-bottom: 2px solid currentColor; }
   .Header__logo {
     display: flex;
     align-items: center; }
     .Header__logo > *:not(:last-child) {
-      margin-right: 1.5rem; }
+      margin: 1.5rem;
+      margin-left: 0; }
     .Header__logo-icon, .Navbar__header-icon {
       display: flex;
       justify-content: center;

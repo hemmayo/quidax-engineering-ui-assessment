@@ -40,16 +40,18 @@
       left: 0;
       height: 2px;
       width: 1.6rem;
-
-      background-color: currentColor;
+      padding: 0.5rem;
+      // background-color: currentColor;
     }
 
     &::before {
       top: -0.8rem;
+      border-top: 2px solid currentColor;
     }
 
     &::after {
       bottom: -0.8rem;
+      border-bottom: 2px solid currentColor;
     }
   }
 
@@ -58,7 +60,8 @@
     align-items: center;
 
     & > *:not(:last-child) {
-      margin-right: 1.5rem;
+      margin: 1.5rem;
+      margin-left: 0;
     }
 
     &-icon {
