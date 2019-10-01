@@ -68,9 +68,10 @@ input[type='search'] {
 
 main {
   width: 100%;
-  background-color: $color-light;
-  overflow-y: scroll;
   height: 90vh;
+  background-color: $color-light;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; // iOS browsers scroll fix for fixed containers.
 
   @include respond-to(tablet) {
     height: 100vh;

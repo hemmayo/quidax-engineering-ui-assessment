@@ -162,11 +162,32 @@
 // Visibility
 
 .hidden {
-  display: none;
+  display: none !important;
+
+  @include respond-to(mobile) {
+    &-xs {
+      display: none !important;
+    }
+  }
+  @include respond-to(tablet) {
+    &-sm {
+      display: none !important;
+    }
+  }
+}
+
+.visible {
+  display: flex !important;
 
   @include respond-to(tablet) {
     &-sm {
-      display: none;
+      display: flex !important;
+    }
+  }
+
+  @include respond-to(mobile) {
+    &-xs {
+      display: flex !important;
     }
   }
 }
@@ -177,6 +198,7 @@
   display: flex;
   position: fixed;
   top: 9rem;
+  // bottom: -3rem;
 
   @include respond-to(tablet) {
     top: 8rem;

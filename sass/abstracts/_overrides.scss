@@ -4,27 +4,33 @@
   &-button {
     height: 100%;
     background: rgba($border-color, 0.6);
+
     &:hover {
       background: rgba($border-color, 0.9);
     }
   }
+
   &-prev-next-button {
     width: 30px;
     height: 30rem;
     border-radius: 0;
   }
+
   &-prev-next-button.previous {
     left: 0;
   }
+
   &-prev-next-button.next {
     right: 0;
   }
+
   &-button-icon {
     fill: currentColor;
   }
 
   &-page-dots {
     bottom: -3rem;
+
     & .dot {
       &.is-selected {
         background: $color-primary;

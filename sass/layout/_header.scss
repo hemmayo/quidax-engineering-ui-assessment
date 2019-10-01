@@ -100,14 +100,18 @@
   &__search {
     display: flex;
     position: relative;
-    flex-basis: 40%;
     align-items: center;
 
+    // Hide by default on screens < tablet
     @include respond-to(tablet) {
       display: none;
     }
 
-    & > button[type='submit'] {
+    &-container {
+      flex-basis: 40%;
+    }
+
+    & button[type='submit'] {
       width: 5rem;
       height: 4rem;
 
@@ -168,6 +172,7 @@
       width: 100%;
       border: 2px solid $border-color;
       border-right: none;
+      border-radius: 0;
       color: darken($border-color, 70);
       padding: 0.7rem 0.8rem;
       outline: none;
@@ -177,6 +182,31 @@
     &-input:focus ~ &-autocomplete {
       visibility: visible;
       opacity: 1;
+    }
+  }
+
+  // Active state for mobile
+  @include respond-to(tablet) {
+    &.search-active {
+      & > * {
+        display: none;
+      }
+      & .Header__search-container {
+        display: flex;
+        flex-basis: 100%;
+
+        & .close::after {
+          content: '\2190';
+          font-size: 2.8rem;
+          margin-right: 3rem;
+        }
+      }
+      & .Header__search {
+        display: flex;
+        flex-basis: 100%;
+
+        position: static;
+      }
     }
   }
 

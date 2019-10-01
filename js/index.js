@@ -24,6 +24,17 @@ navbarControlButtons.forEach(button => {
 
 // Search controls for mobile
 
+const header = document.querySelector('.Header');
+const searchControls = header.querySelectorAll('#close-search, #open-search');
+
+searchControls.forEach(control => {
+  control.addEventListener('click', () => {
+    header.classList.contains('search-active')
+      ? header.classList.remove('search-active')
+      : header.classList.add('search-active');
+  });
+});
+
 // Book additional info controls
 
 const books = document.querySelectorAll('.Book');
