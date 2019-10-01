@@ -6,7 +6,8 @@
  */
 .flickity-button {
   height: 100%;
-  background: rgba(241, 241, 241, 0.6); }
+  background: rgba(241, 241, 241, 0.6);
+  border: 1px solid #f1f1f1; }
   .flickity-button:hover {
     background: rgba(241, 241, 241, 0.9); }
 
