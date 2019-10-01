@@ -156,6 +156,18 @@
   }
 }
 
+// Visibility
+
+.hidden {
+  display: none;
+
+  @include respond-to(tablet) {
+    &-sm {
+      display: none;
+    }
+  }
+}
+
 // Container
 
 .container {

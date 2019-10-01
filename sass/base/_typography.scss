@@ -115,7 +115,8 @@
     margin-top: 3rem;
 
     @include respond-to(tablet) {
-      padding: 1rem 2.5rem;
+      padding: 0;
+      margin: 0;
     }
   }
 }

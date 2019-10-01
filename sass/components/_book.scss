@@ -1,12 +1,16 @@
 .Book {
-  height: 31rem;
-  width: 21rem;
+  height: 30rem;
+  width: 20rem;
 
   position: relative;
   overflow: hidden;
 
   &:not(:last-of-type) {
     margin-right: 2rem;
+
+    @include respond-to(tablet) {
+      margin-right: 0.5rem;
+    }
   }
 
   & > * {

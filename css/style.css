@@ -163,7 +163,8 @@ main {
     margin-top: 3rem; }
     @media (max-width: 768px) {
       .Section:first-of-type .Section__content {
-        padding: 1rem 2.5rem; } }
+        padding: 0;
+        margin: 0; } }
 
 .flex {
   display: flex; }
@@ -267,6 +268,12 @@ main {
 
 .left-lg {
   left: 2rem; }
+
+.hidden {
+  display: none; }
+  @media (max-width: 768px) {
+    .hidden-sm {
+      display: none; } }
 
 .container {
   display: flex;
@@ -580,12 +587,15 @@ main {
       color: #c02525; }
 
 .Book {
-  height: 31rem;
-  width: 21rem;
+  height: 30rem;
+  width: 20rem;
   position: relative;
   overflow: hidden; }
   .Book:not(:last-of-type) {
     margin-right: 2rem; }
+    @media (max-width: 768px) {
+      .Book:not(:last-of-type) {
+        margin-right: 0.5rem; } }
   .Book > * {
     transition: all 0.25s ease-in-out; }
   .Book:hover > .Book__img {
