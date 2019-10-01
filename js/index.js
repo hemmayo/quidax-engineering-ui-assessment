@@ -32,6 +32,9 @@ books.forEach(book => {
   const infoControls = book.querySelectorAll(
     '.Book__see-more, .Book__info-close',
   );
+
+  //   Add event listener if there's any available control for a book component
+
   if (infoControls) {
     infoControls.forEach(control => {
       control.addEventListener('click', () => {

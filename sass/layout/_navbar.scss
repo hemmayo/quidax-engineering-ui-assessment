@@ -87,6 +87,7 @@
   &__item {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 
     & .badge {
       width: 2.2rem;
@@ -101,7 +102,5 @@
       color: $color-primary;
       font-weight: 600;
     }
-  }
-  &__link {
   }
 }

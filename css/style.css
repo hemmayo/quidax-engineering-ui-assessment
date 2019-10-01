@@ -1,18 +1,9 @@
 /**
-    Responsive typography
-    With mobile-first in mind, we see that the key mobile represents the
-    default font size (not in a media query), and breakpoints are in ascending order.
-*/
-/**
-Usage: 
-    $variable-name: 
-        (
-            <breakpoint>: (
-                <font-size>, <line-height>
-                ) or 
-                <font-size>
-        )
-*/
+ * Quidax Book Club UI Engineering Test
+ *
+ * Implementing the dashboard UI
+ * Author: Emma Popoola (@hemmayo)
+ */
 @keyframes rating {
   from {
     color: gold; }
@@ -503,7 +494,8 @@ main {
       margin-top: 1rem; }
   .Navbar__item {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
     .Navbar__item .badge {
       width: 2.2rem;
       transform: translateX(0.5rem); }

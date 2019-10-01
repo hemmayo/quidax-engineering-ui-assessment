@@ -13,6 +13,7 @@
     border: 1px solid $border-color;
   }
 
+  // Book Card Image
   &__img {
     flex-basis: 10rem;
     flex-shrink: 0;
@@ -68,11 +69,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-
-      &__text {
-      }
-      &__stars {
-      }
     }
     & .shares,
     & .likes {
@@ -84,9 +80,11 @@
     }
   }
   &__status {
+    // Available state for book card
     color: $color-primary;
 
     &.neg {
+      // Already booked state
       color: rgb(192, 37, 37);
     }
   }

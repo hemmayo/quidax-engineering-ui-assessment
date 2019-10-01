@@ -150,9 +150,9 @@
         text-transform: capitalize;
         transition: $transition-default;
 
-        &:not(:last-of-type) {
-          //   margin-bottom: 0.5rem;
-        }
+        // &:not(:last-of-type) {
+        //  margin-bottom: 0.5rem;
+        // }
 
         &:hover {
           background-color: $border-color;

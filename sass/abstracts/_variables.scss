@@ -19,12 +19,10 @@ $font-size-default: 1.6rem;
 // Animations and transitions
 
 $transition-default: all 0.25s ease-in-out;
+$transition-slow: all 0.6s ease-in-out;
+$transition-fast: all 0.15s ease-in-out;
 
-/**
-    Responsive typography
-    With mobile-first in mind, we see that the key mobile represents the
-    default font size (not in a media query), and breakpoints are in ascending order.
-*/
+// Responsiveness
 
 $breakpoints: (
   mobile: 425px,
@@ -33,84 +31,3 @@ $breakpoints: (
   laptop-l: 1440px,
   4k: 2560px,
 );
-
-/**
-Usage: 
-    $variable-name: 
-        (
-            <breakpoint>: (
-                <font-size>, <line-height>
-                ) or 
-                <font-size>
-        )
-*/
-
-$p-font-sizes: (
-  mobile: (
-    1.75rem,
-    1.1,
-  ),
-  tablet: (
-    1.85rem,
-    1.2,
-  ),
-  laptop: (
-    2rem,
-    1.5,
-  ),
-);
-
-$h1-font-sizes: (
-  mobile: 4rem,
-  tablet: (
-    5rem,
-    1,
-  ),
-  laptop: (
-    9rem,
-    1,
-  ),
-);
-
-$h2-font-sizes: (
-  mobile: (
-    3.6rem,
-    1.1,
-  ),
-  tablet: (
-    4rem,
-    1.1,
-  ),
-  laptop: (
-    6.5rem,
-    1,
-  ),
-);
-
-$h3-font-sizes: (
-  null: 2.65rem,
-  mobile: 3.4rem,
-  tablet: 3.65rem,
-  laptop: (
-    4.2rem,
-  ),
-);
-
-$h3-font-alt-sizes: (
-  mobile: 2.8rem,
-  tablet: 2.8rem,
-  laptop: (
-    3.4rem,
-  ),
-);
-
-$h4-font-sizes: (
-  mobile: 2.25rem,
-  tablet: 2.25rem,
-  laptop: (
-    2.25rem,
-  ),
-);
-
-// Padding
-$padding-section: 9rem;

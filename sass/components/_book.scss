@@ -125,9 +125,11 @@
   }
 
   &__status {
+    // Available state for book
     color: $color-primary;
 
     &.neg {
+      // Unavailable state for book
       color: rgb(192, 37, 37);
     }
   }
@@ -163,11 +165,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-
-      &__text {
-      }
-      &__stars {
-      }
     }
     & .shares,
     & .likes {
