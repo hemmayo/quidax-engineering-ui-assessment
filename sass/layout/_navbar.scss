@@ -1,0 +1,107 @@
+.Navbar {
+  width: 90%;
+  max-width: 33rem;
+  font-size: 1.4rem;
+  overflow-y: scroll;
+  height: 91vh;
+
+  background-color: $color-light;
+  border-right: 1px solid $border-color;
+  box-shadow: 0rem 0rem 2.5rem $border-color;
+
+  @include respond-to(tablet) {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    transform: translateX(-110%);
+    transition: $transition-default;
+  }
+
+  &--open {
+    transform: translateX(0%);
+  }
+
+  &__close::after {
+    content: '\2190';
+    font-size: 2.8rem;
+  }
+
+  &__header {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem 3rem;
+    height: 15rem;
+
+    @include respond-to(tablet) {
+      display: flex;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &-content {
+      display: flex;
+
+      & > *:not(:last-child) {
+        margin-right: 1.3rem;
+      }
+    }
+
+    &-icon {
+      @extend .Header__logo-icon;
+    }
+    &-info {
+      @extend .text-xs;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    color: $color-dark;
+    padding: 2rem 4rem;
+    width: 100%;
+
+    border-bottom: 2px solid $border-color;
+
+    @include respond-to(tablet) {
+      padding: 1.5rem 3rem;
+    }
+
+    &-title {
+      font-weight: 600;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    & .badge {
+      width: 2.2rem;
+      transform: translateX(0.5rem);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.1rem;
+    }
+
+    &--active > a {
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+  &__link {
+  }
+}

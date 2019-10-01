@@ -1,0 +1,119 @@
+// Font weight
+
+.font {
+  &-light {
+    font-weight: 300;
+  }
+  &-base {
+    font-weight: 400;
+  }
+  &-semibold {
+    font-weight: 600;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+}
+
+// Font sizes
+
+.text {
+  &-xs {
+    font-size: 1.15rem;
+  }
+  &-sm {
+    font-size: 1.4rem;
+  }
+  &-base {
+    font-size: 1.6rem;
+  }
+  &-lg {
+    font-size: 1.825rem;
+  }
+  &-xl {
+    font-size: 1.95rem;
+  }
+  &-2xl {
+    font-size: 2.2rem;
+  }
+}
+
+// Text colors
+
+.text {
+  &-light {
+    color: $color-light;
+  }
+  &-gray {
+    color: $color-gray;
+  }
+  &-dark {
+    color: $color-dark;
+  }
+  &-primary {
+    color: $color-primary;
+  }
+  &-white {
+    color: $color-white;
+  }
+  &-black {
+    color: $color-black;
+  }
+}
+
+// Background Colors
+
+.bg {
+  &-light {
+    background-color: $color-light;
+  }
+  &-gray {
+    background-color: $color-gray;
+  }
+  &-dark {
+    background-color: $color-dark;
+  }
+  &-primary {
+    background-color: $color-primary;
+  }
+  &-white {
+    background-color: $color-white;
+  }
+  &-black {
+    background-color: $color-black;
+  }
+}
+
+.Section {
+  margin: 2rem 0;
+
+  &__title {
+    text-transform: uppercase;
+    width: 100%;
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $border-color;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: $color-black;
+  }
+
+  &__content {
+    padding: 3.5rem;
+    margin-top: 5rem;
+
+    @include respond-to(tablet) {
+      padding: 2.5rem;
+    }
+  }
+
+  &:first-of-type &__content {
+    padding: 1rem 3.5rem;
+    margin-top: 3rem;
+
+    @include respond-to(tablet) {
+      padding: 1rem 2.5rem;
+    }
+  }
+}

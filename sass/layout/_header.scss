@@ -1,0 +1,232 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 9rem;
+  padding: 0 4rem;
+
+  background-color: rgba($color-white, 0.95);
+  box-shadow: 0.5rem 0rem 3rem $border-color;
+  border-bottom: 1px solid $border-color;
+
+  @include respond-to(tablet) {
+    padding: 0 2rem;
+    height: 8rem;
+    background-color: rgba($color-white, 1);
+  }
+
+  &__hamburger {
+    display: none;
+    width: 2.3rem;
+    height: 2px;
+    position: relative;
+
+    color: $color-dark;
+    background-color: currentColor;
+
+    @include respond-to(tablet) {
+      display: inline-flex;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 2px;
+      width: 1.6rem;
+
+      background-color: currentColor;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      bottom: -0.8rem;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 5rem;
+      height: 5rem;
+
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: $color-dark;
+
+      @include respond-to(tablet) {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+
+      & > img,
+      & > svg {
+        object-fit: contain;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include respond-to(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    position: relative;
+    flex-basis: 40%;
+    align-items: center;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    & > button[type='submit'] {
+      width: 5rem;
+      height: 4rem;
+
+      border: 2px solid $border-color;
+      background-color: #f9f9fb;
+      cursor: pointer;
+
+      &:hover {
+        transition: $transition-default;
+        background-color: darken($border-color, 5);
+      }
+
+      & > img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &-autocomplete {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      opacity: 0;
+      visibility: hidden;
+
+      background-color: $color-white;
+      border: 1px solid $border-color;
+      color: $color-gray;
+      font-size: 1.4rem;
+
+      &-suggestions {
+        margin: 0.5rem 0;
+      }
+
+      &-suggestion {
+        padding: 1.2rem 2rem;
+        cursor: pointer;
+        text-transform: capitalize;
+        transition: $transition-default;
+
+        &:not(:last-of-type) {
+          //   margin-bottom: 0.5rem;
+        }
+
+        &:hover {
+          background-color: $border-color;
+        }
+
+        & .match {
+          color: $color-dark;
+        }
+      }
+    }
+
+    &-input {
+      width: 100%;
+      border: 2px solid $border-color;
+      border-right: none;
+      color: darken($border-color, 70);
+      padding: 0.7rem 0.8rem;
+      outline: none;
+      font-size: calc(#{$font-size-default} - 0.2rem);
+    }
+
+    &-input:focus ~ &-autocomplete {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__menu {
+    color: $color-dark;
+
+    &-items {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+
+      @include respond-to(tablet) {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+
+      &:last-of-type {
+        margin-left: 1.5rem;
+      }
+
+      & > img,
+      & > svg {
+        fill: currentColor;
+        object-fit: contain;
+        object-position: top;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      &.avatar {
+        box-shadow: 1px 1px 2rem $border-color;
+        border: 2px solid $border-color;
+
+        & > img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

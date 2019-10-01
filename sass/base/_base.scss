@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::selection {
+  color: $color-light;
+  background: rgba($color-dark, 0.8);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: $fonts;
+  font-display: fallback;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  image-rendering: crisp-edges;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: $font-size-default;
+  font-weight: 400;
+  color: $color-dark;
+  position: relative;
+  //   @extend .restrict-width;
+}
+
+a,
+a:active,
+a:visited {
+  color: $color-dark;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  fill: currentColor;
+  width: 2em;
+
+  &.small {
+    width: 1.5em;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: $fonts;
+}
+
+input[type='search'] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+main {
+  width: 100%;
+  background-color: $color-light;
+  overflow-y: scroll;
+  height: 90vh;
+
+  @include respond-to(tablet) {
+    height: 100vh;
+  }
+}

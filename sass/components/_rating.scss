@@ -1,0 +1,23 @@
+.rating {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+
+  & > span {
+    display: inline-block;
+    position: relative;
+    color: goldenrod;
+    font-size: 1.4rem;
+    width: 1.4rem;
+  }
+  & > span:hover:before,
+  & > span:hover ~ span:before {
+    content: '\2605';
+    position: absolute;
+    cursor: pointer;
+    color: goldenrod;
+    animation: rating 2s;
+    animation-direction: normal;
+    transform: scale(1.2);
+  }
+}

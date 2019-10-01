@@ -5,7 +5,739 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Welcome</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="Header">
+      <div class="Header__logo">
+        <div class="Header__hamburger"></div>
+        <a href="" class="Header__logo-icon"
+          ><img src="https://img.icons8.com/ios-glyphs/64/fefefe/book-shelf.png"
+        /></a>
+        <div class="Header__logo-info text-black">
+          <span class="text-lg font-base">Quidax Book Club</span>
+          <span class="text-sm text-gray">Admin</span>
+        </div>
+      </div>
+      <form class="Header__search">
+        <input
+          id="search"
+          type="search"
+          class="Header__search-input"
+          placeholder="Search books, genres, authors, etc."
+        />
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+            <path
+              d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+            />
+          </svg>
+        </button>
+        <div class="Header__search-autocomplete">
+          <ul class="Header__search-autocomplete-suggestions">
+            <li class="Header__search-autocomplete-suggestion">
+              <span class="match">Four steps to the epiph</span>any Revised -
+              James Mc...
+            </li>
+            <li class="Header__search-autocomplete-suggestion">
+              <span class="match">Four steps to the epiph</span>any - James
+              McEnroe
+            </li>
+            <li class="Header__search-autocomplete-suggestion">
+              <span class="match">The lean start up</span> - Eric Reiss
+            </li>
+            <li class="Header__search-autocomplete-suggestion">
+              No excuses - Brian Tracy
+            </li>
+          </ul>
+        </div>
+      </form>
+      <div class="Header__menu">
+        <ul class="Header__menu-items">
+          <li class="Header__menu-item">
+            <img
+              src="https://img.icons8.com/ios-glyphs/64/212121/book-shelf.png"
+            />
+          </li>
+          <li class="Header__menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 172">
+              <g transform="translate(1.462,1.462) scale(0.983,0.983)">
+                <g
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="none"
+                  stroke-linecap="butt"
+                  stroke-linejoin="none"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                >
+                  <g stroke="#000000" stroke-width="3" stroke-linejoin="round">
+                    <path
+                      d="M99.76,13.76c0,1.77375 -0.34937,3.49375 -0.9675,5.0525c19.32313,5.0525 31.9275,21.84938 31.9275,43.1075c0,26.94219 6.61125,39.21063 12.9,46.1175c3.14438,3.45344 6.24844,5.54969 8.9225,7.525c1.34375,0.98094 2.56656,1.96188 3.655,3.225c1.08844,1.26313 2.0425,3.06375 2.0425,5.0525c0,4.73 -2.9025,8.74781 -6.9875,11.395c-4.085,2.64719 -9.44656,4.35375 -15.91,5.6975c-8.385,1.73344 -18.73187,2.64719 -30.1,3.1175c0.87344,2.27094 1.3975,4.73 1.3975,7.31c0,11.35469 -9.28531,20.64 -20.64,20.64c-11.35469,0 -20.64,-9.28531 -20.64,-20.64c0,-2.56656 0.5375,-5.02562 1.3975,-7.31c-11.36812,-0.47031 -21.715,-1.38406 -30.1,-3.1175c-6.46344,-1.34375 -11.825,-3.05031 -15.91,-5.6975c-4.085,-2.64719 -6.9875,-6.665 -6.9875,-11.395c0,-1.98875 0.95406,-3.78937 2.0425,-5.0525c1.08844,-1.26312 2.31125,-2.24406 3.655,-3.225c2.67406,-1.97531 5.77813,-4.07156 8.9225,-7.525c6.28875,-6.90687 12.9,-19.17531 12.9,-46.1175c0,-21.27156 12.5775,-38.08187 31.9275,-43.1075c-0.61812,-1.55875 -0.9675,-3.27875 -0.9675,-5.0525c0,-7.56531 6.19469,-13.76 13.76,-13.76c7.56531,0 13.76,6.19469 13.76,13.76zM79.12,13.76c0,3.84313 3.03688,6.88 6.88,6.88c3.84313,0 6.88,-3.03687 6.88,-6.88c0,-3.84312 -3.03687,-6.88 -6.88,-6.88c-3.84312,0 -6.88,3.03688 -6.88,6.88zM86,27.52c-3.02344,0 -5.77812,-1.00781 -8.0625,-2.6875c-18.32875,3.27875 -29.7775,17.34781 -29.7775,37.0875c0,28.09781 -7.14875,42.52969 -14.62,50.74c-3.73562,4.09844 -7.51156,6.665 -9.9975,8.4925c-1.23625,0.91375 -2.16344,1.67969 -2.58,2.15c-0.41656,0.47031 -0.3225,0.43 -0.3225,0.5375c0,2.15 0.99438,3.72219 3.87,5.59c2.87563,1.86781 7.55188,3.60125 13.545,4.8375c11.98625,2.48594 29.05188,3.3325 47.945,3.3325c18.89313,0 35.95875,-0.84656 47.945,-3.3325c5.99313,-1.23625 10.66938,-2.96969 13.545,-4.8375c2.87563,-1.86781 3.87,-3.44 3.87,-5.59c0,-0.1075 0.09406,-0.06719 -0.3225,-0.5375c-0.41656,-0.47031 -1.34375,-1.23625 -2.58,-2.15c-2.48594,-1.8275 -6.26187,-4.39406 -9.9975,-8.4925c-7.47125,-8.21031 -14.62,-22.64219 -14.62,-50.74c0,-19.75312 -11.43531,-33.92969 -29.7775,-37.195c-2.28437,1.70656 -5.01219,2.795 -8.0625,2.795zM72.24,151.36c0,7.64594 6.11406,13.76 13.76,13.76c7.64594,0 13.76,-6.11406 13.76,-13.76c0,-2.58 -0.71219,-5.02562 -1.935,-7.095c-3.85656,0.08063 -7.78031,0.215 -11.825,0.215c-4.04469,0 -7.96844,-0.13437 -11.825,-0.215c-1.24969,2.06938 -1.935,4.48813 -1.935,7.095z"
+                    ></path>
+                  </g>
+                  <path
+                    d="M0,172v-172h172v172z"
+                    fill="none"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linejoin="miter"
+                  ></path>
+                  <g stroke="none" stroke-width="1" stroke-linejoin="miter">
+                    <path
+                      d="M86,0c-7.56531,0 -13.76,6.19469 -13.76,13.76c0,1.77375 0.34938,3.49375 0.9675,5.0525c-19.35,5.02563 -31.9275,21.83594 -31.9275,43.1075c0,26.94219 -6.61125,39.21063 -12.9,46.1175c-3.14437,3.45344 -6.24844,5.54969 -8.9225,7.525c-1.34375,0.98094 -2.56656,1.96188 -3.655,3.225c-1.08844,1.26313 -2.0425,3.06375 -2.0425,5.0525c0,4.73 2.9025,8.74781 6.9875,11.395c4.085,2.64719 9.44656,4.35375 15.91,5.6975c8.385,1.73344 18.73188,2.64719 30.1,3.1175c-0.86,2.28438 -1.3975,4.74344 -1.3975,7.31c0,11.35469 9.28531,20.64 20.64,20.64c11.35469,0 20.64,-9.28531 20.64,-20.64c0,-2.58 -0.52406,-5.03906 -1.3975,-7.31c11.36813,-0.47031 21.715,-1.38406 30.1,-3.1175c6.46344,-1.34375 11.825,-3.05031 15.91,-5.6975c4.085,-2.64719 6.9875,-6.665 6.9875,-11.395c0,-1.98875 -0.95406,-3.78937 -2.0425,-5.0525c-1.08844,-1.26312 -2.31125,-2.24406 -3.655,-3.225c-2.67406,-1.97531 -5.77812,-4.07156 -8.9225,-7.525c-6.28875,-6.90687 -12.9,-19.17531 -12.9,-46.1175c0,-21.25812 -12.60437,-38.055 -31.9275,-43.1075c0.61813,-1.55875 0.9675,-3.27875 0.9675,-5.0525c0,-7.56531 -6.19469,-13.76 -13.76,-13.76zM86,6.88c3.84313,0 6.88,3.03688 6.88,6.88c0,3.84313 -3.03687,6.88 -6.88,6.88c-3.84312,0 -6.88,-3.03687 -6.88,-6.88c0,-3.84312 3.03688,-6.88 6.88,-6.88zM94.0625,24.725c18.34219,3.26531 29.7775,17.44188 29.7775,37.195c0,28.09781 7.14875,42.52969 14.62,50.74c3.73563,4.09844 7.51156,6.665 9.9975,8.4925c1.23625,0.91375 2.16344,1.67969 2.58,2.15c0.41656,0.47031 0.3225,0.43 0.3225,0.5375c0,2.15 -0.99437,3.72219 -3.87,5.59c-2.87562,1.86781 -7.55187,3.60125 -13.545,4.8375c-11.98625,2.48594 -29.05187,3.3325 -47.945,3.3325c-18.89312,0 -35.95875,-0.84656 -47.945,-3.3325c-5.99312,-1.23625 -10.66937,-2.96969 -13.545,-4.8375c-2.87562,-1.86781 -3.87,-3.44 -3.87,-5.59c0,-0.1075 -0.09406,-0.06719 0.3225,-0.5375c0.41656,-0.47031 1.34375,-1.23625 2.58,-2.15c2.48594,-1.8275 6.26188,-4.39406 9.9975,-8.4925c7.47125,-8.21031 14.62,-22.64219 14.62,-50.74c0,-19.73969 11.44875,-33.80875 29.7775,-37.0875c2.28438,1.67969 5.03906,2.6875 8.0625,2.6875c3.05031,0 5.77813,-1.08844 8.0625,-2.795zM74.175,144.265c3.85656,0.08063 7.78031,0.215 11.825,0.215c4.04469,0 7.96844,-0.13437 11.825,-0.215c1.22281,2.06938 1.935,4.515 1.935,7.095c0,7.64594 -6.11406,13.76 -13.76,13.76c-7.64594,0 -13.76,-6.11406 -13.76,-13.76c0,-2.60687 0.68531,-5.02562 1.935,-7.095z"
+                    ></path>
+                  </g>
+                  <path
+                    d=""
+                    fill="none"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linejoin="miter"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+            <span class="badge absolute top-sm right-sm">3</span>
+          </li>
+          <li class="Header__menu-item avatar">
+            <img
+              src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=40"
+            />
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container flex justify-between">
+      <aside class="Navbar">
+        <div class="Navbar__header">
+          <div class="Navbar__close"></div>
+          <div class="Navbar__header-content">
+            <a href="" class="Navbar__header-icon"
+              ><img
+                src="https://img.icons8.com/ios-glyphs/64/fefefe/book-shelf.png"
+            /></a>
+            <div class="Navbar__header-info text-black">
+              <span class="text-xl font-base">Quidax Book Club</span>
+              <span class="text-sm text-gray">Admin</span>
+            </div>
+          </div>
+        </div>
+        <ul class="Navbar__section">
+          <li class="Navbar__item Navbar__item--active">
+            <a class="Navbar__link" href="#">Home</a>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Profile</a>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Notifications</a>
+            <span class="badge">3</span>
+          </li>
+        </ul>
+        <ul class="Navbar__section">
+          <span class="Navbar__section-title">Explore</span>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Books</a>
+            <span class="text-xs text-gray">237</span>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Genres</a>
+            <span class="text-xs text-gray">42</span>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Authors</a>
+            <span class="text-xs text-gray">106</span>
+          </li>
+        </ul>
+        <ul class="Navbar__section">
+          <span class="Navbar__section-title">My Books</span>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Queued</a>
+            <span class="text-xs text-gray">3</span>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Currently Borrowed</a>
+            <span class="text-xs text-gray">0</span>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Favorites</a>
+            <span class="text-xs text-gray">19</span>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">History</a>
+          </li>
+        </ul>
+        <ul class="Navbar__section">
+          <span class="Navbar__section-title">Admin</span>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Book Requests</a>
+            <span class="badge">2</span>
+          </li>
+          <li class="Navbar__item">
+            <a class="Navbar__link" href="#">Members</a>
+            <span class="text-xs text-gray">24</span>
+          </li>
+        </ul>
+      </aside>
+      <main>
+        <section class="Section">
+          <div class="Section__content">
+            <h3 class="Section__title">Featured Books</h3>
+          </div>
+          <div
+            class="Book-carousel"
+            data-flickity='{ "cellAlign": "left", "contain": true }'
+          >
+            <figure class="Book">
+              <div class="Book__img">
+                <img
+                  src="https://cdn.pastemagazine.com/www/system/images/photo_albums/best-book-covers-2019-so-far/large/bbc19holdstill.png?1384968217"
+                  alt=""
+                />
+              </div>
+              <span class="Book__see-more"
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 172 172"
+                >
+                  <g
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray=""
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal"
+                  >
+                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                    <g>
+                      <path
+                        d="M86,10.32c-11.35469,0 -20.64,9.28531 -20.64,20.64c0,11.35469 9.28531,20.64 20.64,20.64c11.35469,0 20.64,-9.28531 20.64,-20.64c0,-11.35469 -9.28531,-20.64 -20.64,-20.64zM86,65.36c-11.35469,0 -20.64,9.28531 -20.64,20.64c0,11.35469 9.28531,20.64 20.64,20.64c11.35469,0 20.64,-9.28531 20.64,-20.64c0,-11.35469 -9.28531,-20.64 -20.64,-20.64zM86,120.4c-11.35469,0 -20.64,9.28531 -20.64,20.64c0,11.35469 9.28531,20.64 20.64,20.64c11.35469,0 20.64,-9.28531 20.64,-20.64c0,-11.35469 -9.28531,-20.64 -20.64,-20.64z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <figcaption>
+                <span class="Book__info-close"></span>
+                <div class="Book__content">
+                  <span class="Book__status">Available</span>
+                  <div class="flex flex-col">
+                    <span class="Book__title">Built to Last</span>
+                    <span class="Book__author"
+                      >Jim Collins, Jerry I. Porras</span
+                    >
+                    <span class="Book__year">2001</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span>
+                      <strong>Genre: </strong>
+                      <span>Motivational</span>
+                    </span>
+                    <span>
+                      <strong>Labels: </strong>
+                      <span>Creative, Self-help</span>
+                    </span>
+                  </div>
+                  <div class="Book__more">
+                    <div class="ratings">
+                      <span class="ratings__text"
+                        ><strong>Ratings: </strong>4.0</span
+                      >
+                      <div class="rating">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="shares">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z"
+                          />
+                        </svg>
+
+                        <span>31</span>
+                      </div>
+                      <div class="likes">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 50 50"
+                          version="1.1"
+                        >
+                          <g>
+                            <path
+                              d="M 16.375 9 C 10.117188 9 5 14.054688 5 20.28125 C 5 33.050781 19.488281 39.738281 24.375 43.78125 L 25 44.3125 L 25.625 43.78125 C 30.511719 39.738281 45 33.050781 45 20.28125 C 45 14.054688 39.882813 9 33.625 9 C 30.148438 9 27.085938 10.613281 25 13.0625 C 22.914063 10.613281 19.851563 9 16.375 9 Z M 16.375 11 C 19.640625 11 22.480469 12.652344 24.15625 15.15625 L 25 16.40625 L 25.84375 15.15625 C 27.519531 12.652344 30.359375 11 33.625 11 C 38.808594 11 43 15.144531 43 20.28125 C 43 31.179688 30.738281 37.289063 25 41.78125 C 19.261719 37.289063 7 31.179688 7 20.28125 C 7 15.144531 11.1875 11 16.375 11 Z "
+                            />
+                          </g>
+                        </svg>
+                        <span>29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="Book">
+              <div class="Book__img">
+                <img
+                  src="https://cdn1.theyoungfolks.com/wp-content/uploads/2017/08/31101449/six-of-crows-770x1156.jpg"
+                  alt=""
+                />
+              </div>
+              <figcaption>
+                <div class="Book__content">
+                  <span class="Book__status">Available</span>
+                  <div class="flex flex-col">
+                    <span class="Book__title">Built to Last</span>
+                    <span class="Book__author"
+                      >Jim Collins, Jerry I. Porras</span
+                    >
+                    <span class="Book__year">2001</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span>
+                      <strong>Genre: </strong>
+                      <span>Motivational</span>
+                    </span>
+                    <span>
+                      <strong>Labels: </strong>
+                      <span>Creative, Self-help</span>
+                    </span>
+                  </div>
+                  <div class="Book__more">
+                    <div class="ratings">
+                      <span class="ratings__text"
+                        ><strong>Ratings: </strong>4.0</span
+                      >
+                      <div class="rating">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="shares">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z"
+                          />
+                        </svg>
+
+                        <span>31</span>
+                      </div>
+                      <div class="likes">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 50 50"
+                          version="1.1"
+                        >
+                          <g>
+                            <path
+                              d="M 16.375 9 C 10.117188 9 5 14.054688 5 20.28125 C 5 33.050781 19.488281 39.738281 24.375 43.78125 L 25 44.3125 L 25.625 43.78125 C 30.511719 39.738281 45 33.050781 45 20.28125 C 45 14.054688 39.882813 9 33.625 9 C 30.148438 9 27.085938 10.613281 25 13.0625 C 22.914063 10.613281 19.851563 9 16.375 9 Z M 16.375 11 C 19.640625 11 22.480469 12.652344 24.15625 15.15625 L 25 16.40625 L 25.84375 15.15625 C 27.519531 12.652344 30.359375 11 33.625 11 C 38.808594 11 43 15.144531 43 20.28125 C 43 31.179688 30.738281 37.289063 25 41.78125 C 19.261719 37.289063 7 31.179688 7 20.28125 C 7 15.144531 11.1875 11 16.375 11 Z "
+                            />
+                          </g>
+                        </svg>
+                        <span>29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="Book">
+              <div class="Book__img">
+                <img
+                  src="https://images3.penguinrandomhouse.com/cover/9781101931288"
+                  alt=""
+                />
+              </div>
+              <figcaption>
+                <div class="Book__content">
+                  <span class="Book__status">Available</span>
+                  <div class="flex flex-col">
+                    <span class="Book__title">Built to Last</span>
+                    <span class="Book__author"
+                      >Jim Collins, Jerry I. Porras</span
+                    >
+                    <span class="Book__year">2001</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span>
+                      <strong>Genre: </strong>
+                      <span>Motivational</span>
+                    </span>
+                    <span>
+                      <strong>Labels: </strong>
+                      <span>Creative, Self-help</span>
+                    </span>
+                  </div>
+                  <div class="Book__more">
+                    <div class="ratings">
+                      <span class="ratings__text"
+                        ><strong>Ratings: </strong>4.0</span
+                      >
+                      <div class="rating">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="shares">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z"
+                          />
+                        </svg>
+
+                        <span>31</span>
+                      </div>
+                      <div class="likes">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 50 50"
+                          version="1.1"
+                        >
+                          <g>
+                            <path
+                              d="M 16.375 9 C 10.117188 9 5 14.054688 5 20.28125 C 5 33.050781 19.488281 39.738281 24.375 43.78125 L 25 44.3125 L 25.625 43.78125 C 30.511719 39.738281 45 33.050781 45 20.28125 C 45 14.054688 39.882813 9 33.625 9 C 30.148438 9 27.085938 10.613281 25 13.0625 C 22.914063 10.613281 19.851563 9 16.375 9 Z M 16.375 11 C 19.640625 11 22.480469 12.652344 24.15625 15.15625 L 25 16.40625 L 25.84375 15.15625 C 27.519531 12.652344 30.359375 11 33.625 11 C 38.808594 11 43 15.144531 43 20.28125 C 43 31.179688 30.738281 37.289063 25 41.78125 C 19.261719 37.289063 7 31.179688 7 20.28125 C 7 15.144531 11.1875 11 16.375 11 Z "
+                            />
+                          </g>
+                        </svg>
+                        <span>29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="Book">
+              <div class="Book__img">
+                <img
+                  src="https://images3.penguinrandomhouse.com/cover/9780399585050"
+                  alt=""
+                />
+              </div>
+              <figcaption>
+                <div class="Book__content">
+                  <span class="Book__status">Available</span>
+                  <div class="flex flex-col">
+                    <span class="Book__title">Built to Last</span>
+                    <span class="Book__author"
+                      >Jim Collins, Jerry I. Porras</span
+                    >
+                    <span class="Book__year">2001</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span>
+                      <strong>Genre: </strong>
+                      <span>Motivational</span>
+                    </span>
+                    <span>
+                      <strong>Labels: </strong>
+                      <span>Creative, Self-help</span>
+                    </span>
+                  </div>
+                  <div class="Book__more">
+                    <div class="ratings">
+                      <span class="ratings__text"
+                        ><strong>Ratings: </strong>4.0</span
+                      >
+                      <div class="rating">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="shares">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z"
+                          />
+                        </svg>
+
+                        <span>31</span>
+                      </div>
+                      <div class="likes">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 50 50"
+                          version="1.1"
+                        >
+                          <g>
+                            <path
+                              d="M 16.375 9 C 10.117188 9 5 14.054688 5 20.28125 C 5 33.050781 19.488281 39.738281 24.375 43.78125 L 25 44.3125 L 25.625 43.78125 C 30.511719 39.738281 45 33.050781 45 20.28125 C 45 14.054688 39.882813 9 33.625 9 C 30.148438 9 27.085938 10.613281 25 13.0625 C 22.914063 10.613281 19.851563 9 16.375 9 Z M 16.375 11 C 19.640625 11 22.480469 12.652344 24.15625 15.15625 L 25 16.40625 L 25.84375 15.15625 C 27.519531 12.652344 30.359375 11 33.625 11 C 38.808594 11 43 15.144531 43 20.28125 C 43 31.179688 30.738281 37.289063 25 41.78125 C 19.261719 37.289063 7 31.179688 7 20.28125 C 7 15.144531 11.1875 11 16.375 11 Z "
+                            />
+                          </g>
+                        </svg>
+                        <span>29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="Book">
+              <div class="Book__img">
+                <img
+                  src="https://pro2-bar-s3-cdn-cf4.myportfolio.com/2e52194b029a65d876d57172b412d63e/5a0ce3f3-5f59-4098-8d45-93a73cf2800c_rw_1200.png?h=40a11543bd7bdc2d8e956150e3a5af2c"
+                  alt=""
+                />
+              </div>
+              <figcaption>
+                <div class="Book__content">
+                  <span class="Book__status">Available</span>
+                  <div class="flex flex-col">
+                    <span class="Book__title">Built to Last</span>
+                    <span class="Book__author"
+                      >Jim Collins, Jerry I. Porras</span
+                    >
+                    <span class="Book__year">2001</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span>
+                      <strong>Genre: </strong>
+                      <span>Motivational</span>
+                    </span>
+                    <span>
+                      <strong>Labels: </strong>
+                      <span>Creative, Self-help</span>
+                    </span>
+                  </div>
+                  <div class="Book__more">
+                    <div class="ratings">
+                      <span class="ratings__text"
+                        ><strong>Ratings: </strong>4.0</span
+                      >
+                      <div class="rating">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="shares">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z"
+                          />
+                        </svg>
+
+                        <span>31</span>
+                      </div>
+                      <div class="likes">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 50 50"
+                          version="1.1"
+                        >
+                          <g>
+                            <path
+                              d="M 16.375 9 C 10.117188 9 5 14.054688 5 20.28125 C 5 33.050781 19.488281 39.738281 24.375 43.78125 L 25 44.3125 L 25.625 43.78125 C 30.511719 39.738281 45 33.050781 45 20.28125 C 45 14.054688 39.882813 9 33.625 9 C 30.148438 9 27.085938 10.613281 25 13.0625 C 22.914063 10.613281 19.851563 9 16.375 9 Z M 16.375 11 C 19.640625 11 22.480469 12.652344 24.15625 15.15625 L 25 16.40625 L 25.84375 15.15625 C 27.519531 12.652344 30.359375 11 33.625 11 C 38.808594 11 43 15.144531 43 20.28125 C 43 31.179688 30.738281 37.289063 25 41.78125 C 19.261719 37.289063 7 31.179688 7 20.28125 C 7 15.144531 11.1875 11 16.375 11 Z "
+                            />
+                          </g>
+                        </svg>
+                        <span>29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="Section">
+          <div class="Section__content">
+            <h3 class="Section__title">Recently Added</h3>
+            <div class="grid grid-col-3 grid-gap">
+              <figure class="Book-card">
+                <div class="Book-card__img">
+                  <img
+                    src="https://images3.penguinrandomhouse.com/cover/9781101931288"
+                  />
+                </div>
+
+                <figcaption class="Book-card__details">
+                  <span class="Book-card__status">Available</span>
+                  <div class="Book-card__info">
+                    <span class="Book-card__title">The Effective Engineer</span>
+                    <span class="Book-card__author">Edmond Lau</span>
+                    <span class="Book-card__genre">Motivational</span>
+                  </div>
+                  <div class="Book-card__more">
+                    <div class="ratings">
+                      <span class="ratings__text">Ratings: 4.0</span>
+                      <div class="rating">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="shares">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z"
+                          />
+                        </svg>
+
+                        <span>31</span>
+                      </div>
+                      <div class="likes">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 50 50"
+                          version="1.1"
+                        >
+                          <g>
+                            <path
+                              d="M 16.375 9 C 10.117188 9 5 14.054688 5 20.28125 C 5 33.050781 19.488281 39.738281 24.375 43.78125 L 25 44.3125 L 25.625 43.78125 C 30.511719 39.738281 45 33.050781 45 20.28125 C 45 14.054688 39.882813 9 33.625 9 C 30.148438 9 27.085938 10.613281 25 13.0625 C 22.914063 10.613281 19.851563 9 16.375 9 Z M 16.375 11 C 19.640625 11 22.480469 12.652344 24.15625 15.15625 L 25 16.40625 L 25.84375 15.15625 C 27.519531 12.652344 30.359375 11 33.625 11 C 38.808594 11 43 15.144531 43 20.28125 C 43 31.179688 30.738281 37.289063 25 41.78125 C 19.261719 37.289063 7 31.179688 7 20.28125 C 7 15.144531 11.1875 11 16.375 11 Z "
+                            />
+                          </g>
+                        </svg>
+                        <span>29</span>
+                      </div>
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="Book-card">
+                <div class="Book-card__img">
+                  <img
+                    src="https://images3.penguinrandomhouse.com/cover/9781101931288"
+                  />
+                </div>
+
+                <figcaption class="Book-card__details">
+                  <span class="Book-card__status">Available</span>
+                  <div class="Book-card__info">
+                    <span class="Book-card__title">The Effective Engineer</span>
+                    <span class="Book-card__author">Edmond Lau</span>
+                    <span class="Book-card__genre">Motivational</span>
+                  </div>
+                  <div class="Book-card__more">
+                    <div class="ratings">
+                      <span class="ratings__text">Ratings: 4.0</span>
+                      <div class="rating">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="shares">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z"
+                          />
+                        </svg>
+
+                        <span>31</span>
+                      </div>
+                      <div class="likes">
+                        <svg
+                          class="small"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 50 50"
+                          version="1.1"
+                        >
+                          <g>
+                            <path
+                              d="M 16.375 9 C 10.117188 9 5 14.054688 5 20.28125 C 5 33.050781 19.488281 39.738281 24.375 43.78125 L 25 44.3125 L 25.625 43.78125 C 30.511719 39.738281 45 33.050781 45 20.28125 C 45 14.054688 39.882813 9 33.625 9 C 30.148438 9 27.085938 10.613281 25 13.0625 C 22.914063 10.613281 19.851563 9 16.375 9 Z M 16.375 11 C 19.640625 11 22.480469 12.652344 24.15625 15.15625 L 25 16.40625 L 25.84375 15.15625 C 27.519531 12.652344 30.359375 11 33.625 11 C 38.808594 11 43 15.144531 43 20.28125 C 43 31.179688 30.738281 37.289063 25 41.78125 C 19.261719 37.289063 7 31.179688 7 20.28125 C 7 15.144531 11.1875 11 16.375 11 Z "
+                            />
+                          </g>
+                        </svg>
+                        <span>29</span>
+                      </div>
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="Footer"></footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

@@ -1,0 +1,166 @@
+.flex {
+  display: flex;
+
+  &.flex-col {
+    flex-direction: column;
+  }
+
+  &.justify {
+    &-center {
+      justify-content: center;
+    }
+    &-start {
+      justify-content: flex-start;
+    }
+    &-end {
+      justify-content: flex-end;
+    }
+    &-between {
+      justify-content: space-between;
+    }
+    &-around {
+      justify-content: space-around;
+    }
+    &-evenly {
+      justify-content: space-evenly;
+    }
+  }
+
+  &.items {
+    &-center {
+      align-items: center;
+    }
+    &-start {
+      align-items: flex-start;
+    }
+    &-end {
+      align-items: flex-end;
+    }
+    &-between {
+      align-items: space-between;
+    }
+    &-around {
+      align-items: space-around;
+    }
+    &-evenly {
+      align-items: space-evenly;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+
+  &-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-col-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-col-2,
+  &-col-3,
+  &-col-4 {
+    @include respond-to(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-gap {
+    grid-gap: 1.5rem;
+
+    &-sm {
+      grid-gap: 1rem;
+    }
+    &-md {
+      grid-gap: 2rem;
+    }
+    &-lg {
+      grid-gap: 4rem;
+    }
+  }
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top {
+  &-0 {
+    top: 0;
+  }
+  &-sm {
+    top: 0.5rem;
+  }
+  &-md {
+    top: 1rem;
+  }
+  &-lg {
+    top: 2rem;
+  }
+}
+
+.right {
+  &-0 {
+    right: 0;
+  }
+  &-sm {
+    right: 0.5rem;
+  }
+  &-md {
+    right: 1rem;
+  }
+  &-lg {
+    right: 2rem;
+  }
+}
+
+.bottom {
+  &-0 {
+    bottom: 0;
+  }
+  &-sm {
+    bottom: 0.5rem;
+  }
+  &-md {
+    bottom: 1rem;
+  }
+  &-lg {
+    bottom: 2rem;
+  }
+}
+
+.left {
+  &-0 {
+    left: 0;
+  }
+  &-sm {
+    left: 0.5rem;
+  }
+  &-md {
+    left: 1rem;
+  }
+  &-lg {
+    left: 2rem;
+  }
+}
+
+.container {
+  display: flex;
+  position: fixed;
+  top: 9rem;
+
+  @include respond-to(tablet) {
+    top: 8rem;
+    position: relative;
+  }
+}

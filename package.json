@@ -7,6 +7,8 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "concurrently": "^4.1.2",
+    "live-server": "^1.2.1",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.3",
@@ -18,9 +20,8 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
-    "format": "prettier --write \"**/*.{html,scss,js,md}\""
-  },
-  "dependencies": {
-    "autoprefixer": "^9.6.1"
+    "format": "prettier --write \"**/*.{html,scss,js,md}\"",
+    "live-server": "live-server",
+    "dev": "concurrently --kill-others 'npm run live-server' 'npm run watch:sass'"
   }
 }
