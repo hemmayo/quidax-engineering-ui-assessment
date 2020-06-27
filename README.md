@@ -2,7 +2,7 @@
 
 ## Front-end Engineer Skill Assessment
 
-Implementating a dashboard view for the fictional Quidax Book Club web application using HTML, CSS/SCSS, vanilla Javascript, and ​only​ the suggested libraries/plugins for certain UI elements.
+Implementing a dashboard view for the fictional Quidax Book Club web application using HTML, CSS/SCSS, vanilla Javascript, and ​only​ the suggested libraries/plugins for certain UI elements.
 
 ## Commands
 
